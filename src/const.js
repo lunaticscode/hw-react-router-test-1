@@ -3,6 +3,7 @@ export const PAGE_PATH = {
     SIGNIN: "/signin",
     SIGNUP: "/signup",
     HOME: "/home",
+    COUNTER: "/counter"
 }
 
 

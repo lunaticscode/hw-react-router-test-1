@@ -9,13 +9,15 @@ import Home from './pages/Home';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import {PAGE_PATH} from './const';
+import Counter from './pages/ReducerCounter';
 
 const setComponent = (path) => {
     const mapPathToComponent = {
       [PAGE_PATH.INDEX] : () => <App/>,
       [PAGE_PATH.SIGNIN]: () => <SignIn/>,
       [PAGE_PATH.SIGNUP]: () => <SignUp/>,
-      [PAGE_PATH.HOME]: () => <Home/>
+      [PAGE_PATH.HOME]: () => <Home/>,
+      [PAGE_PATH.COUNTER] : () => <Counter/>,
     }
     return mapPathToComponent[path]();
 }
@@ -32,7 +34,7 @@ ReactDOM.render(
           <Route path={PAGE_PATH.HOME} element={setComponent(PAGE_PATH.HOME)}/>  
           */}
 
-          { Object.values(PAGE_PATH).map( (path) => <Route path={path} element={setComponent(path)}/> ) }
+          { Object.values(PAGE_PATH).map( (path) => <Route key={path} path={path} element={setComponent(path)}/> ) }
 
           <Route path='*' element={<NotFound/>}/>
 
