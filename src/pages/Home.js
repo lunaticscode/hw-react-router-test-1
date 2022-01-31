@@ -1,11 +1,11 @@
 import React, {useEffect} from 'react';
 
 const Home = () => {
-    useEffect(() => {console.log('Main-Component mounted')}, []);
+    useEffect(() => {console.log('Home-Component mounted')}, []);
     
     return (
         <>
-            Main-Component
+            Home-Component
         </>
     )
 }

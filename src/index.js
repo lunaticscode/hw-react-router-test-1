@@ -21,7 +21,6 @@ const setComponent = (path) => {
 }
 
 ReactDOM.render(
-  
   <React.StrictMode>
     <Router>
         <Routes>
@@ -36,7 +35,7 @@ ReactDOM.render(
           { Object.values(PAGE_PATH).map( (path) => <Route path={path} element={setComponent(path)}/> ) }
 
           <Route path='*' element={<NotFound/>}/>
-          
+
         </Routes>
     </Router>
   </React.StrictMode>,
