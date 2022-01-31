@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 
 const SignUpInput = ({sumbitJoinData}) => {
     const [inputs, setInput] = useState({}); 
@@ -7,7 +7,6 @@ const SignUpInput = ({sumbitJoinData}) => {
         setInput({ ...inputs, [target.name]: target.value })    
     }
     const onClickSubmit = () => {
-        //console.log(input)
         sumbitJoinData(inputs)
     }
 
