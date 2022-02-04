@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 const CounterResultInnerView = ({number}) => {
     useEffect(() => {
-        console.log('CounterResultInnerView-component mounted');
+        //console.log('CounterResultInnerView-component mounted');
     })
     return(
         <div>

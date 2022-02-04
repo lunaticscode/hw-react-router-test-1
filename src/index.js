@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -33,8 +33,9 @@ ReactDOM.render(
           <Route path={PAGE_PATH.SIGNUP} element={setComponent(PAGE_PATH.SIGNUP)}/>
           <Route path={PAGE_PATH.HOME} element={setComponent(PAGE_PATH.HOME)}/>  
           */}
-
+          <Suspense fallback={<div>LoadingComponent-loading....</div>} >
           { Object.values(PAGE_PATH).map( (path) => <Route key={path} path={path} element={setComponent(path)}/> ) }
+          </Suspense>
 
           <Route path='*' element={<NotFound/>}/>
 
